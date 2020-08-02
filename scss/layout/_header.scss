@@ -73,3 +73,28 @@
 		}
 	}
 }
+
+html[dir="ltr"]{
+	.user-avatar{
+		margin-left: 0;
+		margin-right: 14px;
+	}
+
+	.noti-list{
+		padding-left: 0;
+		padding-right: 11px;
+
+		li{
+			padding-left: 0;
+			padding-right: 21px;
+
+			&:last-child{
+				padding-right: 0;
+			}
+
+			&.alert{
+				@include pseudo(after, -2px, auto, auto, -9px);
+			}
+		}
+	}
+}

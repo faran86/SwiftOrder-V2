@@ -289,7 +289,7 @@ body{
 
 	span{
 		position: relative;
-		@include pseudo(after, 50%, 105%, auto, -999px);
+		@include pseudo(after, 50%, 105%, auto, -9999px);
 
 		&:after{
 			height: 1px;
@@ -1050,5 +1050,117 @@ body{
 	li{
 		padding-left: 3px;
 		padding-right: 3px;
+	}
+}
+
+html[dir="ltr"]{
+	.sidebar{
+		border-right: 1px solid $green;
+		border-left: 0;
+	}
+
+	.nav{
+		a{
+			margin-right: 0;
+			margin-left: 10px;
+			border-radius: 13px 0 0 13px;
+			@include pseudo(before, -50px, 0, auto, auto);
+			@include pseudo(after, auto, 0, -50px, auto);
+
+			&:before{
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 25px;
+			}
+
+			&:after{
+				border-top-left-radius: 0;
+				border-top-right-radius: 25px;
+			}
+		}
+	}
+
+	.line-heading{
+		span{
+			@include pseudo(after, 50%, -9999px, auto, 105%);
+		}
+	}
+
+	.pitcher-top{
+		text-align: right;
+		padding-left: 0;
+		padding-right: 15px;
+	}
+
+	.customer-info{
+		padding-left: 0;
+		padding-right: 20px;
+	}
+
+	.order-row{
+		.holder{
+			margin-left: 0;
+			margin-right: 15px;
+		}
+	}
+
+	.detail-link{
+		left: auto;
+		right: -18px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+
+		i{
+			&:before{
+				content: '\f105';
+			}
+		}
+	}
+
+	.btn-holder{
+		margin-left: 0;
+		margin-right: 15px;
+	}
+
+	.opener{
+		.title{
+			padding-right: 0;
+			padding-left: 10px;
+		}
+
+		i{
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+
+	.inner-link-style{
+		.switch{
+			margin-left: auto;
+			margin-right: 10px;
+		}
+	}
+
+	.order-info{
+		.title{
+			padding-right: 0;
+			padding-left: 15px;
+		}
+	}
+
+	.table{
+		.trow{
+			.col-50{
+				text-align: left;
+			}
+		}
+	}
+
+	.time{
+		time{
+			margin-left: 0;
+			margin-right: 20px;
+		}
 	}
 }

@@ -3985,7 +3985,7 @@ body {
 	content: "";
 	top: 50%;
 	bottom: auto;
-	left: -999px;
+	left: -9999px;
 	right: 105%;
 }
 
@@ -4685,6 +4685,117 @@ body {
 	padding-right: 3px;
 }
 
+html[dir="ltr"] .sidebar {
+	border-right: 1px solid #02b652;
+	border-left: 0;
+}
+
+html[dir="ltr"] .nav a {
+	margin-right: 0;
+	margin-left: 10px;
+	border-radius: 13px 0 0 13px;
+}
+
+html[dir="ltr"] .nav a:before {
+	position: absolute;
+	content: "";
+	top: -50px;
+	bottom: auto;
+	left: auto;
+	right: 0;
+}
+
+html[dir="ltr"] .nav a:after {
+	position: absolute;
+	content: "";
+	top: auto;
+	bottom: -50px;
+	left: auto;
+	right: 0;
+}
+
+html[dir="ltr"] .nav a:before {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 25px;
+}
+
+html[dir="ltr"] .nav a:after {
+	border-top-left-radius: 0;
+	border-top-right-radius: 25px;
+}
+
+html[dir="ltr"] .line-heading span:after {
+	position: absolute;
+	content: "";
+	top: 50%;
+	bottom: auto;
+	left: 105%;
+	right: -9999px;
+}
+
+html[dir="ltr"] .pitcher-top {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 15px;
+}
+
+html[dir="ltr"] .customer-info {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+html[dir="ltr"] .order-row .holder {
+	margin-left: 0;
+	margin-right: 15px;
+}
+
+html[dir="ltr"] .detail-link {
+	left: auto;
+	right: -18px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+html[dir="ltr"] .detail-link i:before {
+	content: "\f105";
+}
+
+html[dir="ltr"] .btn-holder {
+	margin-left: 0;
+	margin-right: 15px;
+}
+
+html[dir="ltr"] .opener .title {
+	padding-right: 0;
+	padding-left: 10px;
+}
+
+html[dir="ltr"] .opener i {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+html[dir="ltr"] .inner-link-style .switch {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+html[dir="ltr"] .order-info .title {
+	padding-right: 0;
+	padding-left: 15px;
+}
+
+html[dir="ltr"] .table .trow .col-50 {
+	text-align: left;
+}
+
+html[dir="ltr"] .time time {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
 .header {
 	padding: 12px 14px 19px;
 	display: -webkit-box;
@@ -4780,6 +4891,34 @@ body {
 
 .noti-list a:hover {
 	color: #333;
+}
+
+html[dir="ltr"] .user-avatar {
+	margin-left: 0;
+	margin-right: 14px;
+}
+
+html[dir="ltr"] .noti-list {
+	padding-left: 0;
+	padding-right: 11px;
+}
+
+html[dir="ltr"] .noti-list li {
+	padding-left: 0;
+	padding-right: 21px;
+}
+
+html[dir="ltr"] .noti-list li:last-child {
+	padding-right: 0;
+}
+
+html[dir="ltr"] .noti-list li.alert:after {
+	position: absolute;
+	content: "";
+	top: -2px;
+	bottom: auto;
+	left: -9px;
+	right: auto;
 }
 
 @media (min-width: 480px) {
