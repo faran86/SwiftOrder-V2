@@ -666,6 +666,102 @@ input[type="submit"] {
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "icomoon";
+	src: url("../fonts/icomoon.eot?hf8lx9");
+	src: url("../fonts/icomoon.eot?hf8lx9#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?hf8lx9") format("truetype"), url("../fonts/icomoon.woff?hf8lx9") format("woff"), url("../fonts/icomoon.svg?hf8lx9#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icomoon" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	display: inline-block; /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-alert:before {
+	content: "\e900";
+}
+
+.icon-calendar-1:before {
+	content: "\e901";
+}
+
+.icon-edit-2:before {
+	content: "\e902";
+}
+
+.icon-food:before {
+	content: "\e903";
+}
+
+.icon-food-delivery-1:before {
+	content: "\e904";
+}
+
+.icon-home-run:before {
+	content: "\e905";
+}
+
+.icon-lunch:before {
+	content: "\e906";
+}
+
+.icon-money-1:before {
+	content: "\e907";
+}
+
+.icon-padlock:before {
+	content: "\e908";
+}
+
+.icon-phone-2:before {
+	content: "\e909";
+}
+
+.icon-pin-1:before {
+	content: "\e90a";
+}
+
+.icon-SAVE:before {
+	content: "\e90b";
+}
+
+.icon-settings:before {
+	content: "\e90c";
+}
+
+.icon-share:before {
+	content: "\e90d";
+}
+
+.icon-smile:before {
+	content: "\e90e";
+}
+
+.icon-star-1:before {
+	content: "\e90f";
+}
+
+.icon-take-away:before {
+	content: "\e910";
+}
+
+.icon-user-1:before {
+	content: "\e911";
+}
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3874,7 +3970,6 @@ body {
 	background-image: -webkit-linear-gradient(top, #00af50 0%, #2cadc6 100%);
 	background-image: linear-gradient(to bottom, #00af50 0%, #2cadc6 100%);
 	padding-top: 19px;
-	border-left: 1px solid #02b652;
 }
 
 .nav {
@@ -4025,7 +4120,7 @@ body {
 
 .order-row {
 	border-bottom: 1px solid #d1d1d1;
-	margin-bottom: 33px;
+	margin-bottom: 10px;
 }
 
 .order-row.no-border {
@@ -4127,11 +4222,16 @@ body {
 .customer-info i {
 	color: #2aadc2;
 	margin-left: 7px;
+	font-size: 17px;
 }
 
 .customer-info .name {
 	padding-top: 8px;
 	font-size: 18px;
+}
+
+.customer-info .name i {
+	font-size: inherit;
 }
 
 .border-box {
@@ -4412,6 +4512,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.options i {
+	font-size: 22px;
+}
+
 .options .btn {
 	min-width: 120px;
 }
@@ -4496,6 +4600,13 @@ body {
 	width: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.color-box {
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	min-height: 62px;
 }
 
 .gray-box {
@@ -4685,11 +4796,6 @@ body {
 	padding-right: 3px;
 }
 
-html[dir="ltr"] .sidebar {
-	border-right: 1px solid #02b652;
-	border-left: 0;
-}
-
 html[dir="ltr"] .nav a {
 	margin-right: 0;
 	margin-left: 10px;
@@ -4794,6 +4900,10 @@ html[dir="ltr"] .table .trow .col-50 {
 html[dir="ltr"] .time time {
 	margin-left: 0;
 	margin-right: 20px;
+}
+
+html[dir="rtl"] .table .thead {
+	padding-top: 16px;
 }
 
 .header {
@@ -4939,7 +5049,6 @@ html[dir="ltr"] .noti-list li.alert:after {
 
 	.opener {
 		padding-right: 19px;
-		padding-bottom: 4px;
 	}
 
 	.opener i {
@@ -4998,7 +5107,6 @@ html[dir="ltr"] .noti-list li.alert:after {
 	}
 
 	.pitcher-top {
-		margin-top: -20px;
 		padding-left: 40px;
 	}
 
@@ -5041,6 +5149,16 @@ html[dir="ltr"] .noti-list li.alert:after {
 
 	.options li {
 		margin-bottom: 0;
+	}
+
+	.tree-box {
+		width: 50%;
+	}
+
+	.color-box {
+		width: calc(50% - 10px);
+		margin-right: 10px;
+		min-height: 1px;
 	}
 
 	.table .thead {
@@ -5095,6 +5213,12 @@ html[dir="ltr"] .noti-list li.alert:after {
 
 	.tree-box {
 		width: 66.67%;
+		margin-bottom: 0;
+	}
+
+	.color-box {
+		width: calc(33.33% - 15px);
+		margin-left: 5px;
 		margin-bottom: 0;
 	}
 

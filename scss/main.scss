@@ -36,6 +36,7 @@ $media-expressions: (
 
 @font-face { @include fontface('din-arabic', 'arbfonts-urw-din-arabic-bold', 700, normal); }
 
+@import 'layout/icomoon';
 @import 'layout/font-awesome';
 @import 'layout/common';
 @import 'layout/header';
