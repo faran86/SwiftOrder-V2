@@ -27,7 +27,7 @@ $sky: #2cadc7;
 $gradient-top-color: #00af50;
 $gradient-bottom-color: #2cadc6;
 
-$base-font-sans-serif: 'din-arabic' ,'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-sans-serif: 'din-arabic', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
@@ -47,8 +47,8 @@ $base-link-color: $green;
 // Buttons 
 $btn-color: $green;
 $btn-background: $yellow;
-$btn-padding: 4px 15px;
-$btn-font-size: 20px;
+$btn-padding: 7px 15px 10px;
+$btn-font-size: 23px;
 
 // Forms
 $form-element-padding: 8px 14px;

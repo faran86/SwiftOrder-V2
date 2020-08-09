@@ -30,11 +30,11 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
-@font-face { @include fontface('din-arabic', 'arbfonts-urw-din-arabic', 400, normal); }
+@font-face { @include fontface('din-arabic', 'URWDINArabic-Regular', 400, normal); }
 
-@font-face { @include fontface('din-arabic', 'arbfonts-urw-din-arabic-medium', 500, normal); }
+@font-face { @include fontface('din-arabic', 'URWDINArabic-Medium', 500, normal); }
 
-@font-face { @include fontface('din-arabic', 'arbfonts-urw-din-arabic-bold', 700, normal); }
+@font-face { @include fontface('din-arabic', 'URWDINArabic-Bold', 700, normal); }
 
 @import 'layout/icomoon';
 @import 'layout/font-awesome';

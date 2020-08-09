@@ -115,10 +115,13 @@ body{
 	}
 }
 
+.btn-font-sm{
+	font-size: 17px;
+}
+
 .btn-danger{
 	background: $red;
 	color: $white;
-	font-size: 30px;
 
 	&:hover{
 		background: darken($red, 10%);
@@ -129,7 +132,6 @@ body{
 .btn-info{
 	background: $blue;
 	color: $white;
-	font-size: 30px;
 
 	&:hover{
 		background: darken($blue, 10%);
@@ -138,9 +140,10 @@ body{
 }
 
 .btn-secondary{
-	padding-top: 10px;
 	color: $white;
 	background: #bebebe;
+	font-size: 17px;
+	border-radius: 20px;
 
 	&:hover{
 		background: $black;
@@ -182,10 +185,10 @@ body{
 	color: $white;
 	font-weight: 500;
 	padding-top: 64px;
-	font-size: 20px;
+	font-size: 15px;
 
 		@include media('>=desktop'){
-			font-size: 30px;
+			font-size: 25px;
 		}
 
 	ul{
@@ -193,8 +196,12 @@ body{
 	}
 
 	i{
-		font-size: 23px;
+		font-size: 21px;
 		width: 30px;
+
+			@include media('>=tablet'){
+				font-size: 23px;
+			}
 	}
 
 	.title{
@@ -209,12 +216,16 @@ body{
 	a{
 		display: flex;
 		color: inherit;
-		padding: 22px 24px 12px;
+		padding: 15px 20px;
 		margin-right: 10px;
 		border-radius: 0 13px 13px 0;
 		position: relative;
 		@include pseudo(before, -50px, auto, auto, 0);
 		@include pseudo(after, auto, auto, -50px, 0);
+
+			@include media('>=tablet'){
+				padding: 23px 24px;
+			}
 
 		&.active{
 			&:before,
@@ -281,11 +292,7 @@ body{
 .line-heading{
 	color: $green;
 	overflow: hidden;
-	font-size: 32px;
-
-		@include media('>=tablet'){
-			font-size: 37px;
-		}
+	font-size: 26px;
 
 	span{
 		position: relative;
@@ -294,17 +301,16 @@ body{
 		&:after{
 			height: 1px;
 			background-color: $gray4;
-			margin-top: -9px;
 		}
 	}
 }
 
 .pitcher-top{
 	text-align: left;
-	padding-left: 15px;
+	padding-left: 25px;
 
 		@include media('>=tablet'){
-			padding-left: 40px;
+			padding-left: 50px;
 		}
 
 	span{
@@ -312,10 +318,16 @@ body{
 		vertical-align: top;
 		background-color: $white;
 		color: $red;
-		font-size: 24px;
-		padding: 4px 30px;
+		font-size: 16px;
+		line-height: 1;
 		border-top-left-radius: 15px;
 		border-top-right-radius: 15px;
+		padding: 10px;
+
+			@include media('>=tablet'){
+				padding: 5px 33px;
+				font-size: 19px;
+			}
 	}
 }
 
@@ -342,7 +354,7 @@ body{
 
 	.holder{
 		position: relative;
-		padding: 11px;
+		padding: 10px 17px;
 		display: flex;
 		flex-flow: row wrap;
 		background-color: $white;
@@ -374,7 +386,7 @@ body{
 		background: $green;
 		color: $white;
 		font-size: 35px;
-		line-height: 65px;
+		line-height: 58px;
 		text-align: center;
 		border-top-left-radius: 10px;
 		border-bottom-left-radius: 10px;
@@ -408,7 +420,7 @@ body{
 
 .customer-info{
 	color: $gray6;
-	font-size: 25px;
+	font-size: 21px;
 	font-weight: 400;
 	padding-left: 20px;
 
@@ -438,7 +450,7 @@ body{
 
 		time{
 			margin-bottom: 0;
-			margin-left: 20px;
+			margin-left: 7px;
 		}
 	}
 
@@ -449,15 +461,16 @@ body{
 	}
 
 	.name{
-		padding-top: 8px;
+		padding-top: 14px;
 		font-size: 18px;
 
 			@include media('>=phone'){
-				font-size: 30px;
+				font-size: 22px;
 			}
 
 		i{
-			font-size: inherit;
+			font-size: 25px;
+			vertical-align: middle;
 		}
 	}
 }
@@ -472,7 +485,7 @@ body{
 	flex-flow: column wrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
+	padding: 10px 5px;
 	min-width: 90px;
 	flex-grow: 1;
 	margin-left: 5px;
@@ -481,17 +494,36 @@ body{
 	.title{
 		width: 100%;
 		display: block;
-		font-size: 20px;
+		font-size: 14px;
 		font-weight: 500;
+		margin-bottom: 10px;
 	}
 
 	.info{
 		width: 100%;
-		font-size: 20px;
+		font-size: 14px;
+
+		> span{
+			font-size: 25px;
+		}
+
+		.icon-money-1{
+			font-size: 30px;
+		}
+
+		.icon-lunch,
+		.icon-food-delivery-1{
+			font-size: 60px;
+		}
+
+		.no-wrap{
+			white-space: nowrap;
+			font-size: 14px;
+		}
 	}
 
 	.amount{
-		font-size: 28px;
+		font-size: 25px;
 		font-weight: 500;
 	}
 }
@@ -554,11 +586,7 @@ body{
 	border-radius: 10px;
 	z-index: 1;
 	position: relative;
-	padding: 4px 7px 0 8px;
-
-		@include media('>=phone'){
-			padding-right: 19px;
-		}
+	padding: 4px 7px;
 
 	&:hover{
 		background: rgba($white, 0.7);
@@ -580,7 +608,6 @@ body{
 
 			@include media('>=phone'){
 				padding-right: 18px;
-				font-size: 30px;
 			}
 	}
 
@@ -599,11 +626,7 @@ body{
 	color: $white;
 	padding: 10px;
 	border-radius: 10px;
-	font-size: 22px;
-
-		@include media('>=phone'){
-			font-size: 30px;
-		}
+	font-size: 19px;
 
 	i{
 		margin-right: auto;
@@ -747,7 +770,7 @@ body{
 		font-size: 22px;
 
 			@include media('>=tablet'){
-				font-size: 35px;
+				font-size: 29px;
 			}
 
 			@include media('<desktop'){
@@ -778,7 +801,7 @@ body{
 	font-size: 22px;
 
 		@include media('>=tablet'){
-			font-size: 30px;
+			font-size: 29px;
 		}
 
 		@include media('<desktop'){
@@ -820,7 +843,11 @@ body{
 	}
 
 	.text-red{
-		font-size: 50px;
+		font-size: 25px;
+
+			@include media('>=tablet'){
+				font-size: 40px;
+			}
 
 		> span{
 			display: block;
@@ -830,8 +857,12 @@ body{
 
 	.txt{
 		padding: 10px 0 20px;
-		font-size: 40px;
 		color: $gray6;
+		font-size: 20px;
+
+			@include media('>=tablet'){
+				font-size: 35px;
+			}
 	}
 
 	.btn{
@@ -865,9 +896,9 @@ body{
 	align-items: center;
 	justify-content: space-between;
 	border: 1px solid $gray10;
-	padding: 10px 10px 5px;
+	padding: 10px;
 	border-radius: 10px;
-	font-size: 30px;
+	font-size: 20px;
 	color: $gray6;
 	width: 100%;
 	margin-bottom: 20px;
@@ -932,6 +963,8 @@ body{
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
@@ -960,7 +993,7 @@ body{
 	}
 
 	&.fs-small{
-			font-size: 20px;
+			font-size: 13px;
 	}
 }
 
@@ -987,27 +1020,19 @@ body{
 		border-width: 1px 0;
 		border-style: solid;
 		border-color: $gray6;
-		font-size: 18px;
-
-			@include media('>=tablet'){
-				font-size: 25px;
-			}
+		font-size: 17px;
 	}
 
 	.tbody{
 		width: 100%;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 	.trow{
 		display: flex;
 		align-items: center;
 		font-size: 14px;
-
-			@include media('>=desktop'){
-				font-size: 20px;
-			}
 
 		&:not(.border-dashed){
 			border-top: 1px solid $gray;
@@ -1048,7 +1073,7 @@ body{
 	align-items: center;
 
 	.title{
-		font-size: 22px;
+		font-size: 18px;
 		padding-right: 15px;
 	}
 }
@@ -1056,6 +1081,7 @@ body{
 .border-dashed{
 	border-bottom: 1px dashed $gray12;
 	margin-bottom: 40px;
+	padding-bottom: 10px;
 
 	.col-15{
 		font-size: 30px;
@@ -1072,6 +1098,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 5px;
 
 	.empty{
 		color: $gray13;
@@ -1186,14 +1213,6 @@ html[dir="ltr"]{
 		time{
 			margin-left: 0;
 			margin-right: 20px;
-		}
-	}
-}
-
-html[dir="rtl"]{
-	.table{
-		.thead{
-			padding-top: 16px;
 		}
 	}
 }
