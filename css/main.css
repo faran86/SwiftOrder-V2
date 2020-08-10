@@ -4404,7 +4404,7 @@ body {
 
 .op-list {
 	color: #757575;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .op-list li {
@@ -4417,7 +4417,7 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .op-list li:last-child {
@@ -5083,7 +5083,7 @@ html[dir="ltr"] .noti-list li.alert:after {
 	}
 
 	.op-list {
-		font-size: 30px;
+		font-size: 19px;
 	}
 
 	.switch {
